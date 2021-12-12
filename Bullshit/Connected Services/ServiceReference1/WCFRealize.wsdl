@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WCFRealize" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Bullshit.Db" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Server_WCF_.Db" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Server_WCF_.MyClasses" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWcfInterface_WriteToDbOneUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:WriteToDbOneUser" />
+  </wsdl:message>
+  <wsdl:message name="IWcfInterface_WriteToDbOneUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WriteToDbOneUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfInterface_ReadFromDbOneUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadFromDbOneUser" />
+  </wsdl:message>
+  <wsdl:message name="IWcfInterface_ReadFromDbOneUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadFromDbOneUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfInterface_RetrunCurentStateOfProject_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrunCurentStateOfProject" />
+  </wsdl:message>
+  <wsdl:message name="IWcfInterface_RetrunCurentStateOfProject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrunCurentStateOfProjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfInterface_IsLogined_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsLogined" />
+  </wsdl:message>
+  <wsdl:message name="IWcfInterface_IsLogined_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsLoginedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfInterface_ReturnAllUsersForChat_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnAllUsersForChat" />
+  </wsdl:message>
+  <wsdl:message name="IWcfInterface_ReturnAllUsersForChat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnAllUsersForChatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfInterface_Logging_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logging" />
+  </wsdl:message>
+  <wsdl:message name="IWcfInterface_Logging_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoggingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfInterface_ReturnProjectWithCurrentId_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnProjectWithCurrentId" />
+  </wsdl:message>
+  <wsdl:message name="IWcfInterface_ReturnProjectWithCurrentId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnProjectWithCurrentIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWcfInterface">
+    <wsdl:operation name="WriteToDbOneUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfInterface/WriteToDbOneUser" message="tns:IWcfInterface_WriteToDbOneUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfInterface/WriteToDbOneUserResponse" message="tns:IWcfInterface_WriteToDbOneUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadFromDbOneUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfInterface/ReadFromDbOneUser" message="tns:IWcfInterface_ReadFromDbOneUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfInterface/ReadFromDbOneUserResponse" message="tns:IWcfInterface_ReadFromDbOneUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrunCurentStateOfProject">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfInterface/RetrunCurentStateOfProject" message="tns:IWcfInterface_RetrunCurentStateOfProject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfInterface/RetrunCurentStateOfProjectResponse" message="tns:IWcfInterface_RetrunCurentStateOfProject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsLogined">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfInterface/IsLogined" message="tns:IWcfInterface_IsLogined_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfInterface/IsLoginedResponse" message="tns:IWcfInterface_IsLogined_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnAllUsersForChat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfInterface/ReturnAllUsersForChat" message="tns:IWcfInterface_ReturnAllUsersForChat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfInterface/ReturnAllUsersForChatResponse" message="tns:IWcfInterface_ReturnAllUsersForChat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Logging">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfInterface/Logging" message="tns:IWcfInterface_Logging_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfInterface/LoggingResponse" message="tns:IWcfInterface_Logging_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnProjectWithCurrentId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfInterface/ReturnProjectWithCurrentId" message="tns:IWcfInterface_ReturnProjectWithCurrentId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfInterface/ReturnProjectWithCurrentIdResponse" message="tns:IWcfInterface_ReturnProjectWithCurrentId_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWcfInterface" type="tns:IWcfInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WriteToDbOneUser">
+      <soap:operation soapAction="http://tempuri.org/IWcfInterface/WriteToDbOneUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadFromDbOneUser">
+      <soap:operation soapAction="http://tempuri.org/IWcfInterface/ReadFromDbOneUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrunCurentStateOfProject">
+      <soap:operation soapAction="http://tempuri.org/IWcfInterface/RetrunCurentStateOfProject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsLogined">
+      <soap:operation soapAction="http://tempuri.org/IWcfInterface/IsLogined" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnAllUsersForChat">
+      <soap:operation soapAction="http://tempuri.org/IWcfInterface/ReturnAllUsersForChat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logging">
+      <soap:operation soapAction="http://tempuri.org/IWcfInterface/Logging" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnProjectWithCurrentId">
+      <soap:operation soapAction="http://tempuri.org/IWcfInterface/ReturnProjectWithCurrentId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WCFRealize">
+    <wsdl:port name="BasicHttpBinding_IWcfInterface" binding="tns:BasicHttpBinding_IWcfInterface">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/Default" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

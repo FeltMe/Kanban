@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="Bullshit.UserChat"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Bullshit"
+             mc:Ignorable="d" 
+             d:DesignHeight="420" d:DesignWidth="640">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="1.5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="ChatNameOfProject"/>
+        <TextBox Grid.Column="1" Text ="Users" TextAlignment="Center" IsReadOnly="True"/>
+        <ScrollViewer Grid.Row="1">
+            <RichTextBox x:Name="ChatTextBox" IsReadOnly="True"/>
+        </ScrollViewer>
+        <ScrollViewer  Grid.Column="1" Grid.Row="1" Grid.RowSpan="2">
+            <ListView Name="UserViewChat" >
+                <ListView.View>
+                    <GridView x:Name="Grid1">
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=User}" Width="80">User</GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Status}" Width="80">Status</GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </ScrollViewer>
+        <StackPanel Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Stretch" Orientation="Horizontal">
+            <TextBox x:Name="TextToSend" Width="297" FontSize="20"/>
+            <Button Content="Load" Click="LoadUsers" Margin="5,5,5,5"/>
+            <Button Content="Send" Click="SendClick" Margin="5,5,25,5"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

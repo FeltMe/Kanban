@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Bullshit.Db" />
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Server_WCF_.Db" />
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Server_WCF_.MyClasses" />
+  <xs:element name="WriteToDbOneUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Bullshit.Db" minOccurs="0" name="User" nillable="true" type="q1:User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WriteToDbOneUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WriteToDbOneUserResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadFromDbOneUser">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadFromDbOneUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Bullshit.Db" minOccurs="0" name="ReadFromDbOneUserResult" nillable="true" type="q2:User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrunCurentStateOfProject">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProjectId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrunCurentStateOfProjectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Bullshit.Db" minOccurs="0" name="RetrunCurentStateOfProjectResult" nillable="true" type="q3:User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsLogined">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Bullshit.Db" minOccurs="0" name="user" nillable="true" type="q4:User" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Server_WCF_.Db" minOccurs="0" name="project" nillable="true" type="q5:Project" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsLoginedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsLoginedResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReturnAllUsersForChat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdOfProject" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReturnAllUsersForChatResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Server_WCF_.MyClasses" minOccurs="0" name="ReturnAllUsersForChatResult" nillable="true" type="q6:ArrayOfUserViewClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Logging">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Server_WCF_.Db" minOccurs="0" name="logirovanie" nillable="true" type="q7:Logirovanie" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoggingResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReturnProjectWithCurrentId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReturnProjectWithCurrentIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Server_WCF_.Db" minOccurs="0" name="ReturnProjectWithCurrentIdResult" nillable="true" type="q8:Project" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

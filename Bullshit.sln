@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kanban", "Bullshit\Kanban.csproj", "{C1B49F31-D5F5-4DF8-BE8A-12C2E17D341C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server(WCF)", "Server(WCF)\Server(WCF).csproj", "{294FD65E-4BBB-4171-9D93-3C46C57B4D82}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1B49F31-D5F5-4DF8-BE8A-12C2E17D341C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1B49F31-D5F5-4DF8-BE8A-12C2E17D341C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1B49F31-D5F5-4DF8-BE8A-12C2E17D341C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1B49F31-D5F5-4DF8-BE8A-12C2E17D341C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{294FD65E-4BBB-4171-9D93-3C46C57B4D82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{294FD65E-4BBB-4171-9D93-3C46C57B4D82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{294FD65E-4BBB-4171-9D93-3C46C57B4D82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{294FD65E-4BBB-4171-9D93-3C46C57B4D82}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2C5AB19-0CEC-476D-8D0E-454CDC79BC85}
+	EndGlobalSection
+EndGlobal
